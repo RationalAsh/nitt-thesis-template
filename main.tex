@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt,oneside]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+\usepackage{times}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{tocloft}
+\usepackage{tabu}
+\usepackage{fancyhdr}
+\geometry{a4paper, tmargin=1in, rmargin=1in, bmargin=1in, lmargin=1.5in}
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}
+  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
+  
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+\renewcommand\contentsname{\centerline{TABLE OF CONTENTS}}
+\pagestyle{fancy}
+\cfoot{\thepage}
+\rhead{}
+\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\bibname}{References}
+\begin{document}
+
+\frontmatter
+\addtocontents{toc}{\textbf{Title}\hfill\textbf{Page No.}\par}
+\input{titlepage}
+\input{bonafide}
+\addcontentsline{toc}{chapter}{ABSTRACT}
+\input{abstract}
+\addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
+\input{Acknowledge}
+\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+\tableofcontents
+\newpage
+\addcontentsline{toc}{chapter}{LIST OF TABLES}
+\listoftables
+\newpage
+\addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\listoffigures
+ 
+\mainmatter
+
+\chapter{Introduction}
+\input{Chapter1}
+
+\addcontentsline{toc}{chapter}{REFERENCES}
+\bibliography{ashwin_refs}{}
+\bibliographystyle{unsrt}
+\end{document}
