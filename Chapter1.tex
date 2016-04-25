@@ -15,6 +15,8 @@ Quisque tristique urna in lorem laoreet at laoreet quam congue. Donec dolor turp
 
 Donec urna leo, vulputate vitae porta eu, vehicula blandit libero. Phasellus eget massa et leo condimentum mollis. Nullam molestie, justo at pellentesque vulputate, sapien velit ornare diam, nec gravida lacus augue non diam. Integer mattis lacus id libero ultrices sit amet mollis neque molestie. Integer ut leo eget mi volutpat congue. Vivamus sodales, turpis id venenatis placerat, tellus purus adipiscing magna, eu aliquam nibh dolor id nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed cursus convallis quam nec vehicula. Sed vulputate neque eget odio fringilla ac sodales urna feugiat.
 
+Table \ref{table:1} is really awesome and I like it.
+
 The table \ref{table:1} is an example of referenced \LaTeX elements.
  
 \begin{table}[h!]
@@ -58,3 +60,12 @@ Multiple equations
 \textnormal{Process Model: }& x_{k+1} = A(x_k, w_k) = \begin{bmatrix}q_kq_wq_{\Delta}\\\omega_{k}\end{bmatrix}\\
 \textnormal{Measurement Model: }& z_k = H(x_k, v_k) = \begin{bmatrix}q_kgq_k^* + \vec{v}_{acc}\\\vec{\omega}_k + \vec{v}_{rot}\end{bmatrix}
 \end{align}
+
+This is an example of how you can reference an image. This sentence is referring to the Figure \ref{fig:tree}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{KinematicTree}
+    \caption{This is some awesome thing.}
+    \label{fig:tree}
+\end{figure}
