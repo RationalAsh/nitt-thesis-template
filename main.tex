@@ -12,12 +12,21 @@
 \usepackage{fancyhdr}
 \geometry{a4paper, tmargin=1in, rmargin=1in, bmargin=1in, lmargin=1.5in}
 \usepackage{titlesec}
+
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries\centering}
   {\chaptertitlename\ \thechapter}{20pt}{\Huge}
-\titlespacing*{\chapter}{0pt}{-10pt}{40pt}
+%\titlespacing*{\chapter}{0pt}{-10pt}{40pt}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
-\renewcommand\contentsname{\centerline{\fontsize{20pt}{30pt}\selectfont TABLE OF CONTENTS}}
+\setlength{\cftbeforetoctitleskip}{0.43in}
+\setlength{\cftaftertoctitleskip}{21pt}
+\setlength{\cftbeforelottitleskip}{0.43in}
+\setlength{\cftafterlottitleskip}{21pt}
+\setlength{\cftbeforeloftitleskip}{0.43in}
+\setlength{\cftafterloftitleskip}{21pt}
+\renewcommand\contentsname{\centerline{\fontsize{16pt}{16pt}\selectfont TABLE OF CONTENTS}}
+\renewcommand\listfigurename{\centerline{\fontsize{16pt}{16pt}\selectfont LIST OF FIGURES}}
+\renewcommand\listtablename{\centerline{\fontsize{16pt}{16pt}\selectfont LIST OF TABLES}}
 \pagestyle{fancy}
 \cfoot{\thepage}
 \rhead{}
@@ -31,27 +40,35 @@
 
 \frontmatter
 \addtocontents{toc}{\textbf{Title}\hfill\textbf{Page No.}\par}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \input{titlepage}
 \input{bonafide}
 \addcontentsline{toc}{chapter}{ABSTRACT}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \input{abstract}
 \addcontentsline{toc}{chapter}{ACKNOWLEDGEMENTS}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \input{Acknowledge}
 \addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \tableofcontents
 \newpage
 \addcontentsline{toc}{chapter}{LIST OF TABLES}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \listoftables
 \newpage
 \addcontentsline{toc}{chapter}{LIST OF FIGURES}
+\addtocontents{toc}{\vspace{-0.3cm}}
 \listoffigures
  
 \mainmatter
 
 \chapter{Introduction}
+\fontsize{12pt}{18pt}\selectfont
 \input{Chapter1}
 
 \chapter{Materials and Methodology}
+\fontsize{12pt}{18pt}\selectfont
 \input{Chapter2}
 
 \addcontentsline{toc}{chapter}{REFERENCES}
