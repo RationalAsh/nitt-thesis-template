@@ -15,16 +15,16 @@
 \titleformat{\chapter}[display]
   {\normalfont\huge\bfseries\centering}
   {\chaptertitlename\ \thechapter}{20pt}{\Huge}
-  
+\titlespacing*{\chapter}{0pt}{-10pt}{40pt}
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
-\renewcommand\contentsname{\centerline{TABLE OF CONTENTS}}
+\renewcommand\contentsname{\centerline{\fontsize{20pt}{30pt}\selectfont TABLE OF CONTENTS}}
 \pagestyle{fancy}
 \cfoot{\thepage}
 \rhead{}
 \lhead{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\renewcommand{\bibname}{References}
+\renewcommand{\bibname}{\fontsize{16pt}{24pt}\selectfont References \hfill}
 \begin{document}
 
 \frontmatter
