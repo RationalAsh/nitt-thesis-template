@@ -10,34 +10,53 @@
 \usepackage{tocloft}
 \usepackage{tabu}
 \usepackage{fancyhdr}
+%Set the paper size and the margins
 \geometry{a4paper, tmargin=1in, rmargin=1in, bmargin=1in, lmargin=1.5in}
 \usepackage{titlesec}
 
+%Format the chapter headings to be 14pt, centered and Uppercase
 \titleformat{\chapter}[display]
-  {\normalfont\huge\bfseries\centering}
-  {\chaptertitlename\ \thechapter}{20pt}{\Huge}
-%\titlespacing*{\chapter}{0pt}{-10pt}{40pt}
+  {\large\bfseries\centering}
+  {\MakeUppercase\chaptertitlename\ \thechapter}{7pt}{\large\MakeUppercase}
+
+%Format the section headings to be uppercase and 12pt
+\titleformat{\section}[hang]
+  {\MakeUppercase\normalfont\bfseries}
+  {\thesection}{12pt}{\MakeUppercase}
+
+%Format the subsections to be 12pt
+\titleformat{\subsection}[hang]
+  {\MakeUppercase\normalfont\bfseries}
+  {\thesubsection}{12pt}{}
+
+%Set the spacing between the chapter headings and the margins
+\titlespacing*{\chapter}{0pt}{0pt}{24pt}
+%Add dots to the table of contents for chapters
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
+%Set the spacings before and after the titles for the TOC, LOF and LOT
 \setlength{\cftbeforetoctitleskip}{0.43in}
 \setlength{\cftaftertoctitleskip}{21pt}
 \setlength{\cftbeforelottitleskip}{0.43in}
 \setlength{\cftafterlottitleskip}{21pt}
 \setlength{\cftbeforeloftitleskip}{0.43in}
 \setlength{\cftafterloftitleskip}{21pt}
+%Set the fontsize and formatting for the TOC, LOF and LOT 
 \renewcommand\contentsname{\centerline{\fontsize{16pt}{16pt}\selectfont TABLE OF CONTENTS}}
 \renewcommand\listfigurename{\centerline{\fontsize{16pt}{16pt}\selectfont LIST OF FIGURES}}
 \renewcommand\listtablename{\centerline{\fontsize{16pt}{16pt}\selectfont LIST OF TABLES}}
+%Setting page numbers to bottom center
 \pagestyle{fancy}
 \cfoot{\thepage}
 \rhead{}
 \lhead{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
+%Setting bibliography title format
 \renewcommand{\bibname}{\fontsize{16pt}{24pt}\selectfont References \hfill}
 
 
 \begin{document}
-
+%Adding all the stuff that should be numbered with roman numerals
 \frontmatter
 \addtocontents{toc}{\textbf{Title}\hfill\textbf{Page No.}\par}
 \addtocontents{toc}{\vspace{-0.3cm}}
@@ -71,7 +90,7 @@
 \fontsize{12pt}{18pt}\selectfont
 \input{Chapter2}
 
-\addcontentsline{toc}{chapter}{REFERENCES}
 \bibliography{ashwin_refs}{}
+\addcontentsline{toc}{chapter}{REFERENCES}
 \bibliographystyle{unsrt}
 \end{document}
