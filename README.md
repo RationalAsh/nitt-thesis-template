@@ -12,6 +12,6 @@ If you add a new chapter file, make sure you remember to insert it into the main
 I'm compiling using texlive on ubuntu but it should work with MikTeX and other tex comilers on windows and mac as well.
  * Install texlive on ubuntu.
  * Install [latexmk](www.phys.psu.edu/~collins/software/latexmk-jcc/) (a perl script that automates compilation): `sudo apt-get install latexmk`
- * Download this repository as a zip file
+ * Download this repository as a zip file (Or git clone this repo)
  * `cd` to the unzipped folder
  * run `latexmk -pdf -pvc main.tex`
