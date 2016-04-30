@@ -13,10 +13,13 @@
 
 %Set paragraph indentation to zero
 \setlength\parindent{0pt}
+%Set paragraph spacing
+\setlength{\parskip}{12pt}
 
 %Set the paper size and the margins
 \geometry{a4paper, tmargin=1in, rmargin=1in, bmargin=1in, lmargin=1.5in}
 \usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
 
 %Format the chapter headings to be 14pt, centered and Uppercase
 \titleformat{\chapter}[display]
@@ -35,6 +38,8 @@
 
 %Set the spacing between the chapter headings and the margins
 \titlespacing*{\chapter}{0pt}{0pt}{24pt}
+\titlespacing*{\section}{0pt}{0pt}{0pt}
+\titlespacing*{\subsection}{0pt}{0pt}{0pt}
 %Add dots to the table of contents for chapters
 \renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}} % for chapters
 %Set the spacings before and after the titles for the TOC, LOF and LOT
@@ -90,7 +95,7 @@
 \fontsize{12pt}{18pt}\selectfont
 \input{Chapter1}
 
-\chapter{Materials and Methodology}
+\chapter{Implementation}
 \fontsize{12pt}{18pt}\selectfont
 \input{Chapter2}
 
